@@ -174,3 +174,36 @@ cython_debug/
 #.idea/
 
 # End of https://www.toptal.com/developers/gitignore/api/python
+
+# Local SLURM logs
+slurm/*.out
+slurm/*.err
+slurm-*.log
+ray_worker-*.log
+
+# Ray / Tune results
+ray_results/
+~/ray_results/
+.ray/
+ray_tmp/
+
+# W&B local/offline runs
+wandb/
+wandb_osh_command_dir/
+
+# Python/cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Data/cache
+data/
+MNIST/
+*.pt
+*.pth
+
+# Local result summaries generated on cluster
+slurm_cpu_tuning_summary.csv
+slurm_gpu_tuning_summary.csv
