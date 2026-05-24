@@ -207,3 +207,15 @@ MNIST/
 # Local result summaries generated on cluster
 slurm_cpu_tuning_summary.csv
 slurm_gpu_tuning_summary.csv
+
+# Ignoruj wagi modeli i dane
+*.pth
+pcam_data/
+
+# Ignoruj logi z klastra i eksperymentów
+ray_results/
+wandb/
+slurm-*.out
+
+# Ignoruj śmieci systemowe Pythona
+__pycache__/

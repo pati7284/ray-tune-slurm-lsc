@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from ray import train
+from ray import tune
 
 #nasze moduły
 from dataset import get_dataset
@@ -59,4 +59,4 @@ def train_model(config):
         avg_val_loss = val_loss / len(val_loader)
         
         #RAPORTOWANIE DO RAYA
-        train.report({"loss": avg_val_loss, "mean_accuracy": accuracy})
+        tune.report({"loss": avg_val_loss, "mean_accuracy": accuracy})
